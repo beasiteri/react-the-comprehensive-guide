@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="app">
+    <div className="app w-fit mx-auto p-4">
       <BookList />
     </div>
   );

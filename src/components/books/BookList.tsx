@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import './BookList.css';
 
 type BookListProps = {
   id: number;
@@ -30,14 +31,14 @@ function BookList() {
 
   return (
     <div>
-      <h1>Books</h1>
+      <h1 className="font-bold text-lg text-center uppercase mb-6">Books</h1>
       <table>
         <thead>
           <tr>
-            <td>Title</td>
-            <td>Author</td>
-            <td>Isbn</td>
-            <td>Rating</td>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Isbn</th>
+            <th>Rating</th>
           </tr>
         </thead>
         <tbody>
