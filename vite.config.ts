@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
-      '/books': 'http://localhost:3001'
+      '/books': 'http://localhost:3001',
+      '/users': 'http://localhost:3001',
     }
   }
 })

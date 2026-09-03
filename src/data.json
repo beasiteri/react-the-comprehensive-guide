@@ -21,5 +21,56 @@
       "isbn": "978-0201633610",
       "rating": 5
     }
+  ],
+  "users": [
+      {
+        "id": 1,
+        "name": "John Smith",
+        "age": "28",
+        "address": "12 Main Street, Boston, MA",
+        "tel": "+1 617 555 0142"
+      },
+      {
+        "id": 2,
+        "name": "Emma Johnson",
+        "age": "34",
+        "address": "45 Oak Avenue, Chicago, IL",
+        "tel": "+1 312 555 0187"
+      },
+      {
+        "id": 3,
+        "name": "Michael Brown",
+        "age": "41",
+        "address": "78 Park Road, Seattle, WA",
+        "tel": "+1 206 555 0234"
+      },
+      {
+        "id": 4,
+        "name": "Sophia Davis",
+        "age": "25",
+        "address": "23 River Street, Austin, TX",
+        "tel": "+1 512 555 0165"
+      },
+      {
+        "id": 5,
+        "name": "Daniel Wilson",
+        "age": "37",
+        "address": "91 Hill Lane, Denver, CO",
+        "tel": "+1 303 555 0198"
+      },
+      {
+        "id": 6,
+        "name": "Olivia Miller",
+        "age": "30",
+        "address": "56 Lake Avenue, Portland, OR",
+        "tel": "+1 503 555 0276"
+      },
+      {
+        "id": 7,
+        "name": "James Anderson",
+        "age": "46",
+        "address": "34 Garden Street, New York, NY",
+        "tel": "+1 212 555 0319"
+      }
   ]
 }
