@@ -1,7 +1,12 @@
-import "./App.css";
+import BookList from './components/books/BookList';
+import './App.css';
 
 function App() {
-  return <>New React Project</>;
+  return (
+    <div className="app">
+      <BookList />
+    </div>
+  );
 }
 
 export default App;
