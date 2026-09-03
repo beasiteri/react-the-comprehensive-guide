@@ -1,5 +1,3 @@
-import './BookList.css';
-
 type BookListProps = {
   books: {
     id: number;
