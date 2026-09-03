@@ -3,7 +3,7 @@ type BookListProps = {
     id: number;
     title: string;
     author: string;
-    isbn: number;
+    isbn: string;
     rating: number;
   }[];
   error: Error | null;
@@ -24,7 +24,7 @@ function BookList({ books, error, loading }: BookListProps) {
   }
 
   return (
-    <div>
+    <div className="flex flex-col border p-4 mb-6">
       <h1 className="font-bold text-lg text-center uppercase mb-6">Books</h1>
       <table>
         <thead>

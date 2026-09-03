@@ -6,7 +6,7 @@ type BookListProps = {
   id: number;
   title: string;
   author: string;
-  isbn: number;
+  isbn: string;
   rating: number;
 };
 

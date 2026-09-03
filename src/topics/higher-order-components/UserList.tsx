@@ -2,8 +2,8 @@ type UserProps = {
   id: number;
   name: string;
   age: string;
-  address: number;
-  tel: number;
+  address: string;
+  tel: string;
 };
 
 type UserListProps = {
@@ -26,7 +26,7 @@ function UserList({ data: users, error, loading }: UserListProps) {
   }
 
   return (
-    <div className="flex flex-col border-2 p-4">
+    <div className="flex flex-col border p-4">
       <h1 className="font-bold text-lg text-center uppercase mb-6">Users</h1>
       <table>
         <thead>
