@@ -13,6 +13,7 @@ type BookListProps = {
 function BookList() {
   const [books, setBooks] = useState<BookListProps[]>([]);
   const [error, setError] = useState<Error | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     (async () => {
@@ -21,9 +22,15 @@ function BookList() {
         setBooks(books);
       } catch (error) {
         setError(error instanceof Error ? error : new Error('Unknown error'));
+      } finally {
+        setLoading(false);
       }
     })();
   }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   if (error) {
     return <div>Error: {error.message}</div>;
