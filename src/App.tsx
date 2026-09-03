@@ -1,4 +1,4 @@
-import BookList from './topics/data-fetching/BookList';
+import BookList from './topics/container-components/BookList.container';
 import './App.css';
 
 function App() {
