@@ -29,6 +29,10 @@ function BookList() {
     return <div>Error: {error.message}</div>;
   }
 
+  if (books.length === 0) {
+    return <div>No books found.</div>;
+  }
+
   return (
     <div>
       <h1 className="font-bold text-lg text-center uppercase mb-6">Books</h1>
