@@ -9,6 +9,7 @@ export default defineConfig({
     proxy: {
       '/books': 'http://localhost:3001',
       '/users': 'http://localhost:3001',
+      '/products': 'http://localhost:3001',
     }
   }
 })
