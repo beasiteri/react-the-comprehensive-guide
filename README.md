@@ -1,127 +1,78 @@
-# React Boilerplate with Vite, Tailwind CSS, Axios, MUI & MSW
+# React The Comprehensive Guide
 
-A reusable React boilerplate using Vite, Tailwind CSS, Axios, Material UI, and Mock Service Worker (MSW).
+Exploring and implementing the concepts covered in **React The Comprehensive Guide** through practical React code examples.
 
-MSW provides **browser-based API mocking**, making this boilerplate suitable for **local development and static hosting platforms such as GitHub Pages**.
+The goal of this repository is to provide a practical, hands-on reference for the concepts presented in the book, with each topic implemented as a separate React project.
+
+## Topics
+
+Each topic is maintained in its own repository and can be opened and explored independently.
+
+The projects are organized around the concepts covered in the book, for example:
+
+- Data Fetching with Axios
+- Container Components
+- Higher Order Components
+- Context API
+- Render Props
+- Hooks API
+- and more
+
+Select a topic below to open its repository and explore the implementation.
+
+| Topic                    | Repository                                                                                  |
+| ------------------------ | ------------------------------------------------------------------------------------------- |
+| Data Fetching with Axios | [react-data-fetching-axios](https://github.com/beasiteri/react-data-fetching-axios)         |
+| Container Components     | [react-container-components](https://github.com/beasiteri/react-container-components)       |
+| Higher Order Components  | [react-higher-order-components](https://github.com/beasiteri/react-higher-order-components) |
+| Context API              | [react-context-api](https://github.com/beasiteri/react-context-api)                         |
+| Render Props             | [react-render-props](https://github.com/beasiteri/react-render-props)                       |
+| Hooks API                | [react-hooks-api](https://github.com/beasiteri/react-hooks-api)                             |
+
+More topics will be added as the concepts from the book are implemented.
+
+## Exploring the Examples
+
+Each topic repository contains a focused React implementation of the corresponding concept.
+
+The projects are also deployed to GitHub Pages, allowing the examples to be viewed directly in the browser without cloning the repository.
+
+The central repository provides an overview of the topics and links to the individual implementations, making it possible to explore the source code and live examples together.
 
 ## Tech Stack
 
-| Technology        | Purpose                           |
-| ----------------- | --------------------------------- |
-| React             | Building the user interface       |
-| Vite              | Development server and build tool |
-| TypeScript        | Static type checking              |
-| Tailwind CSS      | Utility-first styling             |
-| Material UI       | Pre-built UI components           |
-| Material UI Icons | Material Design icons             |
-| ESLint            | Code quality and consistency      |
-| Axios             | HTTP requests                     |
-| MSW               | Browser-based API mocking         |
+The examples are primarily built with:
 
-## Included
-
-- React + Vite setup
+- React
+- Vite
 - TypeScript
-- Tailwind CSS configuration
-- ESLint configuration
-- Material UI components and icons
-- Axios for HTTP requests
-- MSW for browser-based API mocking
-- Mock Service Worker setup
-- Basic project structure
+- Tailwind CSS
+- Material UI
+- Axios
+- Mock Service Worker (MSW)
 
-## Usage
+The exact technologies may vary depending on the requirements of each example.
 
-This repository is intended to be used as a template for **React development with a browser-based mock REST API**.
+## Running Locally
 
-On GitHub, select **Use this template** and **Create a new repository** based on this boilerplate.
-
-After creating the new repository:
+Clone the repository and install the dependencies:
 
 ```bash
-git clone <your-new-repository-url>
+git clone <repository-url>
 
-cd <your-new-project>
+cd <repository-name>
 
 npm install
 
 npm run dev
 ```
 
-The development environment starts the Vite development server with MSW enabled.
+The application runs the central topic overview locally using Vite.
 
-MSW intercepts API requests in the browser and returns the configured mock responses.
+## Purpose
 
-No separate backend or local API server is required.
+This repository is a personal learning and reference project based on the concepts covered in **React The Comprehensive Guide**.
 
-## Mock API
+The examples are not intended to reproduce the book's code. Instead, they provide independent implementations and experiments based on the concepts discussed in the book.
 
-Mock API handlers can be added to:
-
-```text
-src/mocks/handlers.ts
-```
-
-The MSW service worker is located in:
-
-```text
-public/mockServiceWorker.js
-```
-
-This service worker is registered in the browser when the application starts.
-
-For example, a `/api/books` endpoint can be mocked with MSW:
-
-```ts
-import { http, HttpResponse } from 'msw';
-
-const apiBase = import.meta.env.BASE_URL;
-
-export const handlers = [
-  http.get(`${apiBase}api/books`, () => {
-    return HttpResponse.json([
-      {
-        id: 1,
-        title: 'JavaScript—The Comprehensive Guide',
-        author: 'Philip Ackermann',
-        isbn: '978-3836286299',
-        rating: 5,
-      },
-    ]);
-  }),
-];
-```
-
-API requests can then be made normally with Axios:
-
-```ts
-const { data } = await axios.get(`${import.meta.env.BASE_URL}api/books`);
-```
-
-MSW intercepts the request in the browser and returns the mocked response.
-
-The example above is only a starting point. Replace the endpoint, response data, and handlers with the API structure required by your project.
-
-## Deployment
-
-This boilerplate includes a GitHub Actions workflow for automatic deployment to GitHub Pages.
-
-The workflow is located in:
-
-```text
-.github/workflows/deploy.yml
-```
-
-After creating a new repository from this template:
-
-1. Set the `base` path in `vite.config.ts` to match the repository name:
-
-```ts
-base: '/your-repository-name/',
-```
-
-2. In GitHub, go to **Settings → Pages** and select **GitHub Actions** as the source.
-
-3. Push your changes to the `main` branch.
-
-The GitHub Actions workflow automatically builds the application and deploys the `dist` directory to GitHub Pages.
+The projects are developed incrementally as the different topics are explored.
