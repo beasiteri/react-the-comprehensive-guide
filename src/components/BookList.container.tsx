@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import BookList from './BookList';
 import { baseUrl } from '../config/api';
-import './BookList.css';
 
-type BookListProps = {
+type Book = {
   id: number;
   title: string;
   author: string;
@@ -13,15 +12,15 @@ type BookListProps = {
 };
 
 function BookListContainer() {
-  const [books, setBooks] = useState<BookListProps[]>([]);
+  const [books, setBooks] = useState<Book[]>([]);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     (async () => {
       try {
-        const { data: books } = await axios.get<BookListProps[]>(`${baseUrl}api/books`);
-        setBooks(books);
+        const { data } = await axios.get<Book[]>(`${baseUrl}api/books`);
+        setBooks(data);
       } catch (error) {
         setError(error instanceof Error ? error : new Error('Unknown error'));
       } finally {
