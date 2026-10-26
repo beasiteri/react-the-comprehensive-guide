@@ -38,3 +38,7 @@ npm run dev
 ```
 
 The application starts using Vite with MSW providing the mocked API responses.
+
+## Screenshot
+
+![Application Screenshot](./public/digital-library.png)
