@@ -4,7 +4,7 @@ import { BookOpen, Library, Hash } from 'lucide-react';
 import Rating from './Rating';
 import { baseUrl } from '../config/api';
 
-type Book = {
+type BookProps = {
   id: number;
   title: string;
   author: string;
@@ -13,14 +13,14 @@ type Book = {
 };
 
 function BookList() {
-  const [books, setBooks] = useState<Book[]>([]);
+  const [books, setBooks] = useState<BookProps[]>([]);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     (async () => {
       try {
-        const { data } = await axios.get<Book[]>(`${baseUrl}api/books`);
+        const { data } = await axios.get<BookProps[]>(`${baseUrl}api/books`);
         setBooks(data);
       } catch (error) {
         setError(error instanceof Error ? error : new Error('Unknown error'));
