@@ -3,9 +3,9 @@ import './App.css';
 
 function App() {
   return (
-    <main className="flex flex-col w-fit mx-auto p-4">
+    <div className="flex flex-col w-fit mx-auto px-4">
       <BookList />
-    </main>
+    </div>
   );
 }
 
