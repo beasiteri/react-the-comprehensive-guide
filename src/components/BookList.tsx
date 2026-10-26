@@ -1,7 +1,7 @@
 import { BookOpen, Library, Hash } from 'lucide-react';
 import Rating from './Rating';
 
-type Book = {
+type BookProps = {
   id: number;
   title: string;
   author: string;
@@ -10,7 +10,7 @@ type Book = {
 };
 
 type BookListProps = {
-  books: Book[];
+  books: BookProps[];
   error: Error | null;
   loading: boolean;
 };
