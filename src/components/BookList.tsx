@@ -1,0 +1,76 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import Rating from './Rating';
+import { baseUrl } from '../config/api';
+import './BookList.css';
+
+type BookListProps = {
+  id: number;
+  title: string;
+  author: string;
+  isbn: string;
+  rating: number;
+};
+
+function BookList() {
+  const [books, setBooks] = useState<BookListProps[]>([]);
+  const [error, setError] = useState<Error | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const { data: books } = await axios.get<BookListProps[]>(`${baseUrl}api/books`);
+        setBooks(books);
+      } catch (error) {
+        setError(error instanceof Error ? error : new Error('Unknown error'));
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  if (books.length === 0) {
+    return <div>No books found.</div>;
+  }
+
+  return (
+    <div className="flex flex-col border p-4 mb-6">
+      <h1 className="font-bold text-lg text-center uppercase mb-6">Books</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Isbn</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {books.map((book) => {
+            return (
+              <tr key={book.id}>
+                <td>{book.title}</td>
+                <td>{book.author}</td>
+                <td>{book.isbn}</td>
+                <td>
+                  <Rating max={5} initialRating={book.rating} />
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default BookList;
