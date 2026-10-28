@@ -3,7 +3,7 @@ import axios from 'axios';
 import { baseUrl } from '../config/api';
 import { Table2, LayoutGrid } from 'lucide-react';
 
-type Book = {
+type BookProps = {
   id: number;
   title: string;
   author: string;
@@ -12,12 +12,12 @@ type Book = {
 };
 
 type BookListProps = {
-  renderTable: (books: Book[]) => React.ReactNode;
-  renderCard: (books: Book[]) => React.ReactNode;
+  renderTable: (books: BookProps[]) => React.ReactNode;
+  renderCard: (books: BookProps[]) => React.ReactNode;
 };
 
 function BookList({ renderTable, renderCard }: BookListProps) {
-  const [books, setBooks] = useState<Book[]>([]);
+  const [books, setBooks] = useState<BookProps[]>([]);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [view, setView] = useState<'table' | 'card'>('table');
@@ -25,7 +25,7 @@ function BookList({ renderTable, renderCard }: BookListProps) {
   useEffect(() => {
     (async () => {
       try {
-        const { data: books } = await axios.get<Book[]>(`${baseUrl}api/books`);
+        const { data: books } = await axios.get<BookProps[]>(`${baseUrl}api/books`);
         setBooks(books);
       } catch (error) {
         setError(error instanceof Error ? error : new Error('Unknown error'));
@@ -57,7 +57,7 @@ function BookList({ renderTable, renderCard }: BookListProps) {
 
   return (
     <div>
-      <div className="flex justify-end gap-2">
+      <div className="flex justify-end gap-2 mb-2">
         <div className="relative group">
           <button
             type="button"
