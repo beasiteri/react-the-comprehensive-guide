@@ -41,4 +41,4 @@ The application starts using Vite with MSW providing the mocked API responses.
 
 ## Screenshot
 
-![Application Screenshot](./public/digital-library-and-users.png)
+![Application Screenshot](./public/digital-library-and-users-dashboard.png)
