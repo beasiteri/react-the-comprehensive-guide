@@ -36,7 +36,7 @@ function BookList() {
         <div className="absolute -right-12 -top-16 h-48 w-48 rounded-full bg-white/10" />
         <div className="absolute -bottom-20 right-32 h-40 w-40 rounded-full bg-violet-400/20" />
 
-        <div className="relative mx-auto max-w-6xl px-6 py-10 sm:py-14">
+        <div className="relative mx-auto max-w-6xl">
           <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 ring-1 ring-white/20">
             <BookOpen size={26} />
           </div>
@@ -62,7 +62,7 @@ function BookList() {
       </header>
 
       <main>
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
           <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
             <div className="flex items-center gap-3 border-b border-slate-100 px-6 py-5">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
