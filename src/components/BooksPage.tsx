@@ -5,7 +5,10 @@ import Rating from './Rating';
 function BooksPage() {
   return (
     <div className="min-h-screen bg-slate-50">
-      <header className="bg-linear-to-br from-indigo-950 via-indigo-900 to-violet-900 text-white">
+      <header className="relative overflow-hidden bg-linear-to-br from-indigo-950 via-indigo-900 to-violet-900 text-white">
+        <div className="absolute -right-12 -top-16 h-48 w-48 rounded-full bg-white/10" />
+        <div className="absolute -bottom-20 right-32 h-40 w-40 rounded-full bg-violet-400/20" />
+
         <div className="mx-auto max-w-6xl px-6 py-10 sm:py-14">
           <div className="mb-5 flex items-center gap-2 text-indigo-200">
             <Library size={20} />
