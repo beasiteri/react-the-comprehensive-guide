@@ -6,7 +6,7 @@ function BooksPage() {
   return (
     <div className="min-h-screen bg-slate-50">
       <header className="bg-linear-to-br from-indigo-950 via-indigo-900 to-violet-900 text-white">
-        <div className="mx-auto max-w-5xl px-6 py-10 sm:py-14">
+        <div className="mx-auto max-w-6xl px-6 py-10 sm:py-14">
           <div className="mb-5 flex items-center gap-2 text-indigo-200">
             <Library size={20} />
             <span className="text-sm font-semibold uppercase tracking-[0.2em]">
@@ -24,7 +24,7 @@ function BooksPage() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-10">
+      <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
         <BookList
           renderTable={(books) => (
             <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
@@ -148,11 +148,8 @@ function BooksPage() {
           )}
         />
       </main>
-
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-5xl px-6 py-5 text-center text-xs text-slate-400">
-          Built with React, TypeScript, and the Render Props pattern.
-        </div>
+      <footer className="mt-6 text-center text-xs text-slate-400">
+        Built with React, TypeScript, Axios, and Tailwind CSS
       </footer>
     </div>
   );
