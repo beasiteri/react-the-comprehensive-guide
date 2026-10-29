@@ -1,0 +1,16 @@
+.cart-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cart-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cart-scrollbar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 9999px;
+}
+
+.cart-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
