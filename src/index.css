@@ -1,1 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ahom&display=swap');
 @import 'tailwindcss';
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+header h1 {
+  font-family: 'Noto Serif Ahom', serif;
+}
