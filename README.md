@@ -1,22 +1,20 @@
-# React Render Props Pattern
+# React Context API
 
-A practical React example demonstrating the Render Props pattern for flexible and reusable component rendering.
+Exploring the React Context API for sharing state across components.
 
-This example is part of the [**React The Comprehensive Guide**](https://github.com/beasiteri/react-the-comprehensive-guide) project, which provides an overview of the topics and links to the individual implementations.
+This example is part of the **[React The Comprehensive Guide](https://github.com/beasiteri/react-the-comprehensive-guide)** project, which provides an overview of the topics and links to the individual implementations.
 
 ## Example
 
-The project demonstrates how to use the Render Props pattern to separate data fetching and state management from presentation in a React application.
+The project demonstrates how the Context API can be used to share state and data across components without passing props through every level of the component tree.
 
 It covers:
 
-- Implementing the Render Props pattern in React
-- Fetching book data with Axios
-- Managing data, loading, and error states with React hooks
-- Rendering the same data in different layouts (table and card views)
-- Switching between views dynamically
-- Creating reusable components with flexible rendering logic
-- Using Mock Service Worker (MSW) to mock API responses
+- Creating a React context
+- Providing shared state with a context provider
+- Consuming context values in child components
+- Updating shared state from different components
+- Avoiding unnecessary prop drilling
 
 ## Tech Stack
 
@@ -27,7 +25,6 @@ It covers:
 - Material UI
 - Axios
 - Mock Service Worker (MSW)
-- Lucide React
 
 ## Running Locally
 
@@ -40,10 +37,10 @@ npm install
 npm run dev
 ```
 
-The application starts using Vite, with MSW providing the mocked API responses.
+The application starts using Vite with MSW providing the mocked API responses.
 
 ## Screenshot
 
-![Application Screenshot](./public/digital-library-table-view.png)
+![Application Screenshot](./public/project-screenshot/mini-shop-desktop-view.png)
 
-![Application Screenshot](./public/digital-library-card-view.png)
+![Application Screenshot](./public/project-screenshot/mini-shop-cart-view.png)
