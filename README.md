@@ -1,22 +1,62 @@
-# React Boilerplate with Vite, Tailwind CSS, Axios, MUI & MSW
+## React Projects - Vite, Tailwind CSS, Axios & MSW
 
-A reusable React boilerplate using Vite, Tailwind CSS, Axios, Material UI, and Mock Service Worker (MSW).
-
-MSW provides **browser-based API mocking**, making this boilerplate suitable for **local development and static hosting platforms such as GitHub Pages**.
+This repository is based on a reusable React boilerplate and contains projects exploring different React concepts and development patterns.
+The projects are inspired by topics covered in _React The Comprehensive Guide_. Each topic is implemented in a separate Git branch, with practical examples built on top of the shared boilerplate.
+The main branch contains the base project setup and shared development tools, while the other branches focus on specific React concepts and implementations.
 
 ## Tech Stack
 
-| Technology        | Purpose                           |
-| ----------------- | --------------------------------- |
-| React             | Building the user interface       |
-| Vite              | Development server and build tool |
-| TypeScript        | Static type checking              |
-| Tailwind CSS      | Utility-first styling             |
-| Material UI       | Pre-built UI components           |
-| Material UI Icons | Material Design icons             |
-| ESLint            | Code quality and consistency      |
-| Axios             | HTTP requests                     |
-| MSW               | Browser-based API mocking         |
+| Technology   | Purpose                           |
+| ------------ | --------------------------------- |
+| React        | Building the user interface       |
+| Vite         | Development server and build tool |
+| TypeScript   | Static type checking              |
+| Tailwind CSS | Utility-first styling             |
+| Axios        | HTTP requests                     |
+| MSW          | Browser-based API mocking         |
+| Lucide React | Icons                             |
+| ESLint       | Code quality and consistency      |
+
+## React Topics & Branches
+
+This repository explores different React concepts through practical examples, with each topic developed on a separate Git branch.
+
+### Available Topics
+
+| Branch                       | Topic                    | Description                                             |
+| ---------------------------- | ------------------------ | ------------------------------------------------------- |
+| `main`                       | React Boilerplate        | Base project setup and shared configuration.            |
+| `01-data-fetching-axios`     | Data Fetching with Axios | Fetching API data using Axios and MSW.                  |
+| `02-container-components`    | Container Components     | Separating application logic from presentation.         |
+| `03-higher-order-components` | Higher-Order Components  | Reusing component logic with HOCs.                      |
+| `04-render-props`            | Render Props             | Sharing component logic using the render props pattern. |
+| `05-context-api`             | Context API              | Sharing state across components using React Context.    |
+
+### How to Explore a Topic
+
+Each React topic is developed on a separate branch. To explore a specific example, clone the repository and switch to the corresponding branch.
+
+If you haven't cloned the repository yet:
+
+```bash
+git clone <repository-url>
+cd <repository-name>
+git switch 01-data-fetching-axios
+npm install
+npm run dev
+```
+
+If you already have the repository locally, simply switch branches:
+
+```bash
+git switch 01-data-fetching-axios
+```
+
+Replace `01-data-fetching-axios` with the branch you want to explore.
+
+See the [Usage](#usage) section for more information about setting up and running the project.
+
+Each branch demonstrates a specific React concept through a practical implementation while building on the project's shared foundation.
 
 ## Included
 
@@ -101,27 +141,3 @@ const { data } = await axios.get(`${import.meta.env.BASE_URL}api/books`);
 MSW intercepts the request in the browser and returns the mocked response.
 
 The example above is only a starting point. Replace the endpoint, response data, and handlers with the API structure required by your project.
-
-## Deployment
-
-This boilerplate includes a GitHub Actions workflow for automatic deployment to GitHub Pages.
-
-The workflow is located in:
-
-```text
-.github/workflows/deploy.yml
-```
-
-After creating a new repository from this template:
-
-1. Set the `base` path in `vite.config.ts` to match the repository name:
-
-```ts
-base: '/your-repository-name/',
-```
-
-2. In GitHub, go to **Settings → Pages** and select **GitHub Actions** as the source.
-
-3. Push your changes to the `main` branch.
-
-The GitHub Actions workflow automatically builds the application and deploys the `dist` directory to GitHub Pages.
