@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import WebshopContext from '../WebshopContext';
-import { Heart } from 'lucide-react';
+import { Heart, ShoppingCart } from 'lucide-react';
 import type { ProductProps } from '../types';
 
 function ProductItem({ product }: { product: ProductProps }) {
@@ -51,8 +51,9 @@ function ProductItem({ product }: { product: ProductProps }) {
           onClick={() => addToCart(product)}
           type="button"
           aria-label="Add to basket"
-          className=" bg-black/80 text-white text-xs py-3 rounded-lg cursor-pointer hover:bg-black"
+          className="mt-3 w-full inline-flex items-center justify-center gap-2 font-semibold transition duration-200 shadow-xs bg-black/80 text-white text-xs py-3 rounded-lg cursor-pointer hover:bg-black/90"
         >
+          <ShoppingCart className="mr-2" size={18} />
           Add to Basket
         </button>
       </div>

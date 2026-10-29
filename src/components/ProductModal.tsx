@@ -158,9 +158,11 @@ function ProductModal() {
 
           <button
             type="button"
-            className="flex w-full justify-center bg-[#b44f4f]/90 text-white hover:bg-[#b44f4f] transition-colors text-[14px] font-semibold rounded-xl py-2 cursor-pointer"
+            aria-label="Add to basket"
+            className="mt-3 w-full inline-flex items-center justify-center gap-2 font-semibold transition duration-200 shadow-xs bg-black/80 text-white text-xs py-3 rounded-lg cursor-pointer hover:bg-black/90"
           >
-            <ShoppingCart className="mr-2" size={18} /> Buy
+            <ShoppingCart className="mr-2" size={18} />
+            Buy
           </button>
         </div>
       </div>
